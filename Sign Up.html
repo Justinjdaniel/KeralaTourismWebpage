@@ -19,13 +19,28 @@
     <!-- Bootstrap Linked  -->
 </head>
 <body>
-    <!-- NavBar starts Here  -->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(255, 255, 255, 0.5);">
-        <a class="navbar-brand" href="#" style="font-weight: bold;">
-        <img src="Content/Tree.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        KERALA TOURISM</a>
-    </nav>
-    <!-- NavBar ends Here  -->
+    <!-- NavBar Starts Here  -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="Content/Tree.png" width="30" height="30" alt="">
+                  </a>
+                <a class="navbar-brand" href="#">Kerala Tourism</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="Home.html">Home</a>
+                </li>                             
+            </div>
+            </div>
+        </nav>
+    </header>
+    <!-- NavBar Ends Here  -->
     <!-- Sign Up Box starts here  -->
     <div class="signup-form-1">
         <form action="Sign Up.html" method="POST">
@@ -35,7 +50,7 @@
             <input type="password" placeholder="Password" class="txtb" required="">
             <input type="password" placeholder="Confirm Password" class="txtb" required="">
             <input type="submit" value="Create Account" class="signup-btn">
-            <a href="Sign In.html">Already Have One ?</a>
+            <a class="text-decoration-none" href="Sign In.html">Already Have One ?</a>
         </form>
     </div>
     <!-- Sign Up Box ends Here  -->
