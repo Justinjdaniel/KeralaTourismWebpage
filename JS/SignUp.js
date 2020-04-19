@@ -4,9 +4,9 @@ let number = document.getElementById("phone-number");
 let phoneerror = document.getElementById("phone-error");
 let password = document.getElementById("password");
 let passworderror = document.getElementById("password-error");
-let confirmpassword = document.getElementById("confim-password");
+let confirmpassword = document.getElementById("confirm-password");
 let confirmerror = document.getElementById("confirm-error");
-let passwordstrength = document.getElementById("password-strength-meter");
+// let passwordstrength = document.getElementById("password-strength-meter");
 // let text = document.getElementById('password-strength-text');
 
 var strength = {
@@ -74,18 +74,18 @@ function validatePassword(){
 }
 
 function validateCheckPassword(){
-    if (password.value == (confirmpassword.value))
+    if (password.value == confirmpassword.value)
     {
         confirmpassword.style.border ="2px solid green";
-        confirmpassworderror.innerHTML = "Password Matched ☺";
-        confirmpassworderror.style.color = "green";
+        confirmerror.innerHTML = "Password Matched ☺";
+        confirmerror.style.color = "green";
         return true;
     }
     else
     {
         confirmpassword.style.border ="2px solid red";
-        confirmpassworderror.innerHTML = "Password Unmatched ☹";
-        confirmpassworderror.style.color = "red";
+        confirmerror.innerHTML = "Password Unmatched ☹";
+        confirmerror.style.color = "red";
         return false; 
     }
 }
@@ -104,17 +104,17 @@ function validateCheckPassword(){
 
 
 
-password.addEventListener('input', function()
-{
-var val = password.value;
-var result = zxcvbn(val);
-// Update the password strength meter
-meter.value = result.score;
-// Update the text indicator
-if(val !== "") {
-    text.innerHTML = "Strength: " + "<strong>" + strength[result.score] + "</strong>" + "<span class='feedback'>" + result.feedback.warning + " " + result.feedback.suggestions + "</span"; 
-}
-else {
-    text.innerHTML = "";
-}
-});
+// password.addEventListener('input', function()
+// {
+// var val = password.value;
+// var result = zxcvbn(val);
+// // Update the password strength meter
+// meter.value = result.score;
+// // Update the text indicator
+// if(val !== "") {
+//     text.innerHTML = "Strength: " + "<strong>" + strength[result.score] + "</strong>" + "<span class='feedback'>" + result.feedback.warning + " " + result.feedback.suggestions + "</span"; 
+// }
+// else {
+//     text.innerHTML = "";
+// }
+// });
