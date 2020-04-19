@@ -34,7 +34,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link navhome" href="index.html">Home</a>
               </li>              
           </div>
           </div>
@@ -43,11 +43,13 @@
   <!-- NavBar Ends Here  -->
   <!-- SignIn Box starts Here  -->
     <div class="container-fluid" style="min-height: 100vh;">
-      <form class="box" action="Login.html" method="POST">
+      <form class="box" action="Home.html" onsubmit="return !!(validateUsername() & validatePassword());" method="POST">
       <h1>Login</h1>
-      <input type="text" name="" required="" placeholder="Username">
-      <input type="password" name="" required="" placeholder="Password">
-      <a class="loginbtn text-decoration-none" href="Home.html" type="button">Sign In</a>   
+      <input type="text" required="" id="username" placeholder="Username">
+      <p for="username-check" id="user-error"></p>
+      <input type="password" required="" id="password" placeholder="Password">
+      <p for="password-check" id="password-error"></p>
+      <input type="submit" value="Sign In" id="submit" class="login-btn text-decoration-none">
       <a class="b1 text-decoration-none" href="#" target="_blank">FORGOT PASSWORD ?</a>
       <a class="b2 text-decoration-none" href="Sign Up.html" target="_blank">CREATE AN ACCOUNT</a>
     </form>
@@ -56,9 +58,13 @@
   <!-- Footer Starts Here  -->    
     <footer class="mastfoot mt-auto">
         <div class="inner">
-          <p>For educational Purposes @<a href="#">Kerala Tourism</a>, by <a href="#">Justin J</a>.</p>
+          <p style="text-align: center;">For educational Purposes @<a href="#">Kerala Tourism</a>, by <a href="#">Justin J</a>.</p>
         </div>
     </footer>
   <!-- Footer Ends Here  -->
+
+    <!-- Javascript Starts Here  -->
+    <Script src="JS/Sign In.js.js"></Script>
+    <!-- Javascript Ends here  -->
 </body>
 </html>

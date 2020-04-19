@@ -34,7 +34,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home</a>
+                  <a class="nav-link navhome" href="index.html">Home</a>
                 </li>                             
             </div>
             </div>
@@ -43,14 +43,20 @@
     <!-- NavBar Ends Here  -->
     <!-- Sign Up Box starts here  -->
     <div class="signup-form-1">
-        <form action="Sign Up.html" method="POST">
+        <form action="Sign In.html" method="POST" onsubmit="return !!(validateEmail() & validatePhone() & validatePassword() & validateCheckPassword());">
             <h1>SIGN UP</h1>
             <input type="text" placeholder="Full Name" class="txtb" required="">
-            <input type="email" placeholder="Email Address" class="txtb" required="">
-            <input type="password" placeholder="Password" class="txtb" required="">
-            <input type="password" placeholder="Confirm Password" class="txtb" required="">
-            <!-- <input type="submit" value="Create Account" class="signup-btn"> -->
-            <a class="signup-btn text-decoration-none" href="Sign In.html" type="button">Create Account</a>
+            <input type="email" placeholder="Email Address" id="email" class="txtb" required="">
+            <p for="email-check" id="email-error"></p>
+            <input type="number" placeholder="Phone Number" id="phone-number" maxlength="10" class="txtb" required="">
+            <p for="phonenumber-check" id="phone-error"></p>
+            <input type="password" placeholder="Password" id="password" class="txtb" required="">
+            <!-- <meter max="4" id="password-strength-meter"></meter>  -->
+            <p for="password-check" id="password-error"></p>
+            <!-- <p for="password-strenght" id="password-strength-text"></p> -->
+            <input type="password" placeholder="Confirm Password" id="confirm-password" class="txtb" required="">
+            <input type="submit" value="Create Account" id="submit" class="signup-btn text-decoration-none">
+            <!-- <a class="signup-btn text-decoration-none" href="Sign In.html" id="sumbit" type="button">Create Account</a> -->
             <a class="text-decoration-none" href="Sign In.html">Already Have One ?</a>
         </form>
     </div>
@@ -60,9 +66,13 @@
     <!-- Footer Starts Here  -->
     <footer class="mastfoot mt-auto">
         <div class="inner">
-          <p style="color: white;">For educational Purposes @<a href="#">Kerala Tourism</a>, by <a href="#">Justin J</a>.</p>
+          <p style="color: white; text-align: center;">For educational Purposes @<a href="#">Kerala Tourism</a>, by <a href="#">Justin J</a>.</p>
         </div>
     </footer>
     <!-- Footer Ends Here  -->
+
+    <!-- Javascript Starts Here  -->
+    <Script src="JS/SignUp.js"></Script>
+    <!-- Javascript Ends here  -->
   </body>
   </html>

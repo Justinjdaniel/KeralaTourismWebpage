@@ -45,20 +45,41 @@ li, a, button{
 .navbar-nav{
     text-align: center;
 }
-.nav-link{
-    border: 2px solid;
-    border-radius: 15px;    
+.nav-link{    
+       ;
 }
 
 @media only screen and (max-width: 767px){
     .navbar-nav .ml-auto{
         background:rbga(0,0,0,.5);
     }
-    /* .navbar-toggler{
+    .navbar-toggler{
         padding: 1px 5px;
         font-size: 18px;
         line-height: 0.3;
         background: #fff;
-    } */
+    }
 }
-
+.navhome{
+    border: 2px solid #fff;
+}
+.navhome:hover{
+    background: rgba(44, 43, 43, 0.568);
+    border-radius: 15px;
+}
+.navin{
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+.navin:hover{
+    background: rgba(44, 43, 43, 0.568);
+    border-radius: 15px;
+    border: 2px solid #2ecc71;
+}
+.navup{
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+.navup:hover{
+    background: rgba(44, 43, 43, 0.568);
+    border-radius: 15px;
+    border: 2px solid #2e85cc;
+}

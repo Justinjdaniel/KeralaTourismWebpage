@@ -24,20 +24,18 @@ body{
     font-weight: bold;
     letter-spacing: 2px;
 }
-/* .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-    color: #fff;
-}
-.navbar-light .navbar-nav .nav-link{
-    color: #fff;
-}
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
-    color: #fff;
-} */
 .navbar-nav{
     text-align: center;
 }
 .nav-link{
     padding: .2rem 1rem;
+}
+.navhome{
+    border: 2px solid rgba(255, 255, 255, 0.7);
+}
+.navhome:hover{
+    background: rgba(44, 43, 43, 0.568);
+    border-radius: 15px;
 }
 
 @media only screen and (max-width: 767px){
@@ -82,6 +80,7 @@ body{
     width: 250px;
     outline: none;
     color: white;
+    font-family: "Montserrat", sans-serif;
     border-radius: 10px;
     transition: 0.25s;
 }
@@ -89,7 +88,7 @@ body{
     width: 300px;
     border-color: #2ecc71;
 }
-.loginbtn{
+.login-btn{
     background: none;
     display: block;
     margin: 20px auto;
@@ -99,11 +98,13 @@ body{
     width: 150px;
     outline: none;
     color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
     border-radius: 44px;
     transition: 0.25s;
     cursor: pointer;
 }
-.loginbtn:hover{
+.login-btn:hover{
     background: #2ecc71;
     transform: scale(0.9);
 }
