@@ -90,7 +90,7 @@ function validateCheckPassword(){
     }
 }
 
-
+// password.addEventListener('input', function()
 
 
 
