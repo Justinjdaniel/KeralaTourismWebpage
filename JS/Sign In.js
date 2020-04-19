@@ -1,12 +1,7 @@
 let username = document.getElementById("username");
 let usererror = document.getElementById("user-error");
-// let number = document.getElementById("phone-number");
-// let phoneerror = document.getElementById("phone-error");
 let password = document.getElementById("password");
 let passworderror = document.getElementById("password-error");
-// let confirmpassword = document.getElementById("confim-password");
-// let confirmerror = document.getElementById("confirm-error");
-// let passwordstrength = document.getElementById("password-strength-meter");
 
 function validateEmail(){
 
