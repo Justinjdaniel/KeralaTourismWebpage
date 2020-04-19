@@ -74,7 +74,7 @@ function validatePassword(){
 }
 
 function validateCheckPassword(){
-    if (password.value == confirmpassword.value)
+    if (password.value == (confirmpassword.value))
     {
         confirmpassword.style.border ="2px solid green";
         confirmpassworderror.innerHTML = "Password Matched ☺";
@@ -104,17 +104,17 @@ function validateCheckPassword(){
 
 
 
-// password.addEventListener('input', function()
-// {
-// var val = password.value;
-// var result = zxcvbn(val);
-// // Update the password strength meter
-// meter.value = result.score;
-// // Update the text indicator
-// if(val !== "") {
-//     text.innerHTML = "Strength: " + "<strong>" + strength[result.score] + "</strong>" + "<span class='feedback'>" + result.feedback.warning + " " + result.feedback.suggestions + "</span"; 
-// }
-// else {
-//     text.innerHTML = "";
-// }
-// });
+password.addEventListener('input', function()
+{
+var val = password.value;
+var result = zxcvbn(val);
+// Update the password strength meter
+meter.value = result.score;
+// Update the text indicator
+if(val !== "") {
+    text.innerHTML = "Strength: " + "<strong>" + strength[result.score] + "</strong>" + "<span class='feedback'>" + result.feedback.warning + " " + result.feedback.suggestions + "</span"; 
+}
+else {
+    text.innerHTML = "";
+}
+});
