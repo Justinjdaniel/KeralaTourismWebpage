@@ -6,8 +6,8 @@ let password = document.getElementById("password");
 let passworderror = document.getElementById("password-error");
 let confirmpassword = document.getElementById("confirm-password");
 let confirmerror = document.getElementById("confirm-error");
-// let passwordstrength = document.getElementById("password-strength-meter");
-// let text = document.getElementById('password-strength-text');
+let passwordstrength = document.getElementById("password-strength");
+// let passwordstrengthmeter = document.getElementById("password-strength-meter");
 
 var strength = {
     0: "Worst ☹",
@@ -90,31 +90,35 @@ function validateCheckPassword(){
     }
 }
 
-// password.addEventListener('input', function()
+// password.addEventListener('keyup', function(){
+//     passwordstrength();
+// })
+// function passwordstrength(){
+//     var val = document.getElementById("password").value;
+//     var passwordexp1=  /^(?=.*\d)(?=.*[^a-zA-Z0-9]){8,15}$/;
+//     var passwordexp2=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]){8,15}$/;
+//     var counter=0;
 
+//     if (val !=="")
+//     {
+//         if (passwordexp1.test(password.value))
+//         counter = 1;
+//         if (passwordexp2.test(password.value))
+//         counter = 2;
+//         if(passwordexp.test(password.value))
+//         counter = 3;
 
-
-
-
-
-
-
-
-
-
-
-
-// password.addEventListener('input', function()
-// {
-// var val = password.value;
-// var result = zxcvbn(val);
-// // Update the password strength meter
-// meter.value = result.score;
-// // Update the text indicator
-// if(val !== "") {
-//     text.innerHTML = "Strength: " + "<strong>" + strength[result.score] + "</strong>" + "<span class='feedback'>" + result.feedback.warning + " " + result.feedback.suggestions + "</span"; 
+//         if (counter == 1){
+//             passwordstrength.innerHTML="Password is Weak ☹";
+//             passwordstrength.style.color = "red";
+//         }
+//         if (counter == 2){
+//             passwordstrength.innerHTML="Password is Medium ☺";
+//             passwordstrength.style.color = "yellow";
+//         }
+//         if (counter == 3){
+//             passwordstrength.innerHTML="Password is Strong ☻";
+//             passwordstrength.style.color = "green";
+//         }
+//     }
 // }
-// else {
-//     text.innerHTML = "";
-// }
-// });
